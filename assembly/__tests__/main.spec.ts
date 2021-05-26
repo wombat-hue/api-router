@@ -1,9 +1,21 @@
-import { setGreeting } from '..'
-import { storage, Context } from 'near-sdk-as'
+import * as contract from '..';
+import { storage, Context, VM, VMContext, logging } from "near-sdk-as";
 
-describe('Greeting ', () => {
-  it('should be set and read', () => {
-    setGreeting('hello world')
-    storage.get<string>(Context.sender)
-  })
-})
+describe("Task Add", () => {
+  beforeAll(() => {
+    // There can be some common setup for each test.
+    logging.log("Before All")
+  });
+
+  it("Reaches task threshold", () => {
+    const result = contract.batch_task("mail", 20);
+    expect(result).toBe(true);
+  });
+
+  it("Does NOT Reach task threshold", () => {
+    const result = contract.batch_task("pony_express", 0);
+    expect(result).toBe(false);
+  });
+
+});
+
