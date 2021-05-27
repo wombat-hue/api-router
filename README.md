@@ -13,7 +13,7 @@ The idea is to create a router for API call requests to, as a first step, organi
 2. [x] Create apiouter contract, with input as stub contract type, number of units.
    1. If Router has enough contracts, will execute matching stub contract type. Return value of contract type.
    2. Otherwise, will increment contract count of that type. Return nothing.
-3. [] Translate above architecture from count-based to token based.
+3. [ ] Translate above architecture from count-based to token based.
    1. Create a mechanism that's equivalent of pre-authorization/hold on near account calling the routerapi (escrow? lockup?)
    2. Change apirouter to accept three arguments - $total near token willing to be spent, $amount per stub execution allowed, time allowed for task
    3. Change stubs to include stub current cost/execution.
