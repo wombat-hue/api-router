@@ -7,13 +7,13 @@ describe("Task Add", () => {
   });
 
   it("Reaches task threshold", () => {
-    const result = contract.batch_task("mail", 20);
-    expect(result).toBe(true);
+    const result = contract.batch_task("sms", 20);
+    expect(result).toBe("sms");
   });
 
   it("Does NOT Reach task threshold", () => {
     const result = contract.batch_task("pony_express", 0);
-    expect(result).toBe(false);
+    expect(result).toBe(null);
   });
 
 });

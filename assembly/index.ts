@@ -22,12 +22,8 @@ export function batch_task(taskName: string, taskUnits: i32): void {
   logging.log("Submitted task " + taskName + " for " + taskUnits.toString())
 
   if (taskName_to_taskUnits_map.contains(taskName)) {
-    logging.log("Above criterion")
     logging.log(taskName_to_taskUnits_map.getSome(taskName));
     taskUnits += taskName_to_taskUnits_map.getSome(taskName);
-  } else {
-    logging.log("Below criterion")
-    taskName_to_taskUnits_map.set(taskName, taskUnits);
   }
 
   if (taskUnits >= TASK_UNIT_THRESHOLD) {
@@ -40,6 +36,6 @@ export function batch_task(taskName: string, taskUnits: i32): void {
     promise.returnAsResult();
   } else {
     logging.log("Not above threshold " + TASK_UNIT_THRESHOLD.toString() + " needs " + (TASK_UNIT_THRESHOLD - taskUnits).toString());
+    taskName_to_taskUnits_map.set(taskName, taskUnits);
   }
-  logging.log("Reached last line of batch_task");
 }

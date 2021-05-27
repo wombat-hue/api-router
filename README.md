@@ -59,4 +59,4 @@ Before you compile this code, you will need to install [Node.js] ≥ 12, then:
 
 1. In terms of creating sub-accounts, why can't wombat.testnet create domains 1 level remoted to it? For example, wombat.testnet can't create email.apirouter.wombat.testnet? Does it cost
 2. Why am i returning Void for the promise?
-3.
+3. What gas is burned by sub-account?
