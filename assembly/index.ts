@@ -37,7 +37,7 @@ export function batch_task(taskName: string, taskUnits: i32): void {
     logging.log('Stub Contract Address : ' + stubcontract + " called by " + APIROUTER_ADDRESS)
     let promise = router.callStub(stubcontract, APIROUTER_ADDRESS)
     taskName_to_taskUnits_map.set(taskName, 0);
-    promise.returnAsResult;
+    promise.returnAsResult();
   } else {
     logging.log("Not above threshold " + TASK_UNIT_THRESHOLD.toString() + " needs " + (TASK_UNIT_THRESHOLD - taskUnits).toString());
   }
