@@ -4,7 +4,6 @@ import { storage, Context, VM, VMContext, logging } from "near-sdk-as";
 describe("Task Add", () => {
   beforeAll(() => {
     // There can be some common setup for each test.
-    logging.log("Before All")
   });
 
   it("Reaches task threshold", () => {

@@ -44,3 +44,8 @@ Before you compile this code, you will need to install [Node.js] ≥ 12, then:
 [create-near-app]: https://github.com/near/create-near-app
 [node.js]: https://nodejs.org/en/download/package-manager/
 [as-pect]: https://www.npmjs.com/package/@as-pect/cli
+
+# Questions
+
+1. In terms of creating sub-accounts, why can't wombat.testnet create domains 1 level remoted to it? For example, wombat.testnet can't create email.apirouter.wombat.testnet? Does it cost
+2. Why am i returning Void for the promise?
