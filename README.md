@@ -10,7 +10,7 @@ The idea is to create a router for API call requests to, as a first step, organi
    1. SMS (sms.apirouter.wombat.testnet)
    2. Email (email.apirouter.wombat.testnet)
    3. Phone (phone.apirouter.wombat.testnet)
-2. [x] Create apiouter contract, with input as stub contract type, number of units.
+2. [x] Create apirouter contract, with input as stub contract type, number of units.
    1. If Router has enough contracts, will execute matching stub contract type. Return value of contract type.
    2. Otherwise, will increment contract count of that type. Return nothing.
 3. [ ] Translate above architecture from count-based to token based.
